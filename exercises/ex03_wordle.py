@@ -1,5 +1,6 @@
 """EX03 Structured Wordle: My closest step to wordle!"""
-__author__ = 730574005
+__author__ = "730574005"
+
 
 def contains_char(word: str, single_char: str) -> bool:
     """checks if character is in a word."""
@@ -10,6 +11,7 @@ def contains_char(word: str, single_char: str) -> bool:
             return True
         i += 1
     return False
+
 
 def emojified(guess: str, secret: str) -> str:
     """Emojifies a character to green if correct, yellow if contained in the word, and white if incorrect."""
@@ -32,12 +34,14 @@ def emojified(guess: str, secret: str) -> str:
                 i += 1
     return emoji
 
+
 def input_guess(expected_length: int) -> str:
     """Takes your inputted guess and make sure it's the expected length."""
     guess: str = input(f"Enter a {expected_length} character word: ")
     while len(guess) != expected_length:
         guess = input(f"That wasn't {expected_length} chars! Try again: ")
     return guess
+
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
@@ -53,6 +57,7 @@ def main() -> None:
         print("X/6 - Sorry, try again tomorrow!")
     else:
         print(f"You won in {i}/6 turns!")
+
 
 if __name__ == "__main__":
     main()
