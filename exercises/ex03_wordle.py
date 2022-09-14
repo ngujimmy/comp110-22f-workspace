@@ -17,7 +17,7 @@ def contains_char(word: str, single_char: str) -> bool:
 def emojified(guess: str, secret: str) -> str:
     """Emojifies a character to green if correct, yellow if contained in the word, and white if incorrect."""
     assert len(guess) == len(secret)
-    #unicode for boxes
+    # unicode for boxes
     WHITE_BOX: str = "\U00002B1C"
     GREEN_BOX: str = "\U0001F7E9"
     YELLOW_BOX: str = "\U0001F7E8"
