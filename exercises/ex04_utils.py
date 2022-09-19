@@ -2,7 +2,7 @@
 __author__ = "730574005"
 
 
-def all(int_list: list, test: int) -> bool:
+def all(int_list: list[int], test: int) -> bool:
     i: int = 0
     match: int = test
     result: bool = False 
@@ -12,26 +12,37 @@ def all(int_list: list, test: int) -> bool:
             match = int_list[i]
             i += 1 
         else:
-            result = False
-            match = int_list[i]
-            i += 1
-    if result == True:
-        print(True)
-        return True
-    else:
-        print(False)
-        return False
+            print(False)
+            return False
+    print(True)
+    return True
 
-
-def max(int_list: list) -> int:
+def max(input: list[int]) -> int:
+    if len(input) == 0:
+        raise ValueError("max() arg is an empty List")
     i: int = 0
-    max: int = int_list[0]
-    while i > len(int_list):
-        if int_list[i] > max:
-            max = int_list[i]
+    max = input[0]
+    while i < len(input):
+        if input[i] > max:
+            max = input[i]
             i += 1
-        i += 1
+        else:
+            i += 1
     print(max)
     return(max)
 
 
+def is_equal(list1: list[int], list2: list[int]) -> bool:
+    i: int = 0
+    while i < len(list1) and len(list2):
+        if list1[i] == list2[i]:
+            i += 1
+        else:
+            print(False)
+            return False
+    print(True)
+    return True
+
+
+if __name__ == "__main__":
+    is_equal([1, 0, 1], [2, 0, 1, 1, 2])
