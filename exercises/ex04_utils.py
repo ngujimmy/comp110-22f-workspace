@@ -48,7 +48,3 @@ def is_equal(list1: list[int], list2: list[int]) -> bool:
             return False
     print(True)
     return True
-
-
-if __name__ == "__main__":
-    is_equal([1, 0, 1], [2, 0, 1, 1, 2])
