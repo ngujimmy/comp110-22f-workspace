@@ -38,7 +38,6 @@ def test_concat_three_integers() -> None:
     assert concat(list1, list2) == [1, 2, 3, 3, 2, 1]
 
 
-
 def test_concat_negative_integers() -> None:
     """Tests the concat function using three integers."""
     list1: list[int] = [-3, -1, -2]
