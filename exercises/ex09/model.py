@@ -166,11 +166,12 @@ class Model:
     def check_contacts(self) -> None:
         """Checks contact between 2 cells."""
         for index_1 in range(constants.CELL_COUNT):
-            index_2: int = index_1 + 1
-            while index_2 < len(self.population):
+            # index_2: int = index_1 + 1
+            # while index_2 < len(self.population):
+            for index_2 in range(constants.CELL_COUNT):
                 if self.population[index_2].location.distance(self.population[index_1].location) < constants.CELL_RADIUS:
                     self.population[index_2].contact_with(self.population[index_1])
-                index_2 += 1
+                # index_2 += 1
 
     def is_complete(self) -> bool:
         """Method to indicate when the simulation is complete."""
